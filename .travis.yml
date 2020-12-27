@@ -5,7 +5,7 @@ services:
   - docker
 
 before_install:
-  - dockerfile build -t radji/docker-react -f Dockerfile.dev .
+  - docker build -t radji/docker-react -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true radji/docker-react npm run test
